@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-    class Board
+    public class Board
     {
 		/// <summary>
 		/// Tic Tac Toe Gameboard states
@@ -19,7 +19,14 @@ namespace Lab04_TicTacToe.Classes
 
 		public void DisplayBoard()
 		{
-			
+            for (int i = 0; i < GameBoard.GetLength(0); i++)
+            {
+                for (int j = 0; j < GameBoard.GetLength(0); j++)
+                {
+                    Console.Write($"|{GameBoard[i, j]}|");
+                }
+                Console.WriteLine();
+            }
 			//TODO: Output the board to the console
 		
 		}

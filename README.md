@@ -31,11 +31,11 @@ Then select and open ```Lab 04 TicTacToe.sln```
 ### Visuals
 
 #### Application Start
-![Start](https://via.placeholder.com/750x500)
+![Start](https://github.com/darrikpuetz/Lab04-TicTacToe/blob/master/Assets/Start.PNG)
 #### Using the Application
-![Adding Character](https://via.placeholder.com/750x500)
+![Adding Character](https://github.com/darrikpuetz/Lab04-TicTacToe/blob/master/Assets/Playing.PNG)
 #### Application End
-![Win](https://via.placeholder.com/750x500)
+![Win](https://github.com/darrikpuetz/Lab04-TicTacToe/blob/master/Assets/Win.PNG)
 
 ---
 

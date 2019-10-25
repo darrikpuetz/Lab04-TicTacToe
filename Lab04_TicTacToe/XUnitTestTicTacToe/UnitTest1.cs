@@ -42,7 +42,6 @@ namespace XUnitTestTicTacToe
         [Fact]
         public void CheckTie()
         {
-            //Need to find a better way to check the tie.
             Player chris = new Player();
             chris.Marker = "X";
             Player enrique = new Player();
@@ -57,8 +56,36 @@ namespace XUnitTestTicTacToe
             testGame.Board.GameBoard[1, 2] = "X";
             testGame.Board.GameBoard[2, 2] = "X";
             Assert.False(testGame.CheckForWinner(testGame.Board));
+        }
+            
+            [Fact]
+        public void CheckSwitch()
+        {
+            Player chris = new Player();
+            chris.Marker = "X";
+            Player enrique = new Player();
+            chris.Marker = "O";
 
+            Game testGame = new Game(chris, enrique);
+            testGame.Board.GameBoard[0, 0] = "X";
+            testGame.Board.GameBoard[1, 0] = "O";
+            
 
+            Assert.Equal(testGame.PlayerTwo, testGame.NextPlayer());
+        }            [Fact]
+        public void CheckSwitchWrong()
+        {
+            Player chris = new Player();
+            chris.Marker = "X";
+            Player enrique = new Player();
+            chris.Marker = "O";
+
+            Game testGame = new Game(chris, enrique);
+            testGame.Board.GameBoard[0, 0] = "X";
+            testGame.Board.GameBoard[1, 0] = "O";
+            
+
+            Assert.NotEqual(testGame.PlayerOne, testGame.NextPlayer());
         }
     }
 }
